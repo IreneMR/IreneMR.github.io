@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ey</title>
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="EY">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="EY">
+
+    <link rel="shortcut icon" href="./src/assets/img/favicon.ico"><!--16x16 o 32x32-->
+    <link rel="apple-touch-icon" href="./src/assets/img/favicon_iOS.png"><!--114x114-->
+
+    <!-- <link rel="stylesheet/less" type="text/css" href="./../assets/styles/styles.less" /> -->
+    <link rel="stylesheet/less" type="text/css" href="./dist/styles.css" />
+
+    <!-- <script>less = { env: 'development'};</script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/less" ></script> -->
+    <!-- <script>less.watch();</script> -->
+    
+</head>
+<body>
+    <section data-hero></section>
+    <script id="hero" type="text/x-handlebars-template">
+        <div class="entry">
+            <h1>{{title}}</h1>
+            <div class="body">
+                {{#each elems}}
+                    <p>{{body}}</p>
+                {{/each}}
+            </div>
+        </div>
+    </script>
+
+    <section data-distributive></section>
+    <script id="distributive" type="text/x-handlebars-template">
+        <div class="entry">
+            <h1>{{title}}</h1>
+            <div class="body">
+                {{#each elems}}
+                    <p>{{body}}</p>
+                {{/each}}
+            </div>
+        </div>
+    </script>
+
+    <section data-slider></section>
+    <script id="slider" type="text/x-handlebars-template">
+        <div class="entry">
+            <h1>{{title}}</h1>
+            <div class="body">
+                {{#each elems}}
+                    <p>{{body}}</p>
+                {{/each}}
+            </div>
+        </div>
+    </script>
+
+    <section data-footer></section>
+    <script id="footer" type="text/x-handlebars-template">
+        <div class="entry">
+            <h1>{{title}}</h1>
+            <div class="body">
+                {{#each elems}}
+                    <p>{{body}}</p>
+                {{/each}}
+            </div>
+        </div>
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js" integrity="sha512-E1dSFxg+wsfJ4HKjutk/WaCzK7S2wv1POn1RRPGh8ZK+ag9l244Vqxji3r6wgz9YBf6+vhQEYJZpSjqWFPg9gg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="module" src="./src/assets/scripts/handlebars.js"></script>
+    <script type="module" src="./src/assets/scripts/app.js"></script>
+</body>
+</html>

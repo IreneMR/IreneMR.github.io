@@ -1,0 +1,14 @@
+{ 
+    "title": "My New Post",
+    "elems": [
+        {
+            "body": "This is my first post!"
+        },
+        {
+            "body": "This is my first post!"
+        },
+        {
+            "body": "This is my first post!"
+        }
+    ]
+}
