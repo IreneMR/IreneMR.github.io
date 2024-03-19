@@ -1,0 +1,27 @@
+// Responsive media queries
+// use:
+//   .element {
+//     display: inline-block;
+
+//     .media( tablet, {
+//       display:block;
+//     });
+//   }
+
+.media( @size, @content ) {
+  & when ( @size = tablet ) {
+    @media only screen and (min-width: @tablet) { @content(); }
+  }
+
+  & when ( @size = desktop ) {
+    @media only screen and (min-width: @desktop) { @content(); }
+  }
+}
+
+// Px to Rem
+// use:
+//   .element {
+//     width: 100/@rem;
+//   }
+@base-size: 16;
+@rem: @base-size*1rem;

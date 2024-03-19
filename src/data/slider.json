@@ -1,0 +1,150 @@
+{
+  "title": "An exceptional service, <span class='highlight'>at the right price.</span>",
+  "parag": "Start with our free plan and switch to premium as you grow",
+  "cards": [
+      {
+        "image": "./src/assets/images/credit-card.webp",
+        "title": "Free",
+        "price": "$0",
+        "parag": "Manage your business with a simple and efficient account",
+        "buttonText": "Get Started",
+        "itemList": [
+          {
+            "text": "10 free local transfer"
+          },
+          {
+            "text": "10 free local transfer"
+          },
+          {
+            "text": "Multi-user access"
+          },
+          {
+            "text": "Prepaid debit cards"
+          },
+          {
+            "text": "Virtual cards"
+          },
+          {
+            "text": "Priority 24/7 support",
+            "disabled": true
+          },
+          {
+            "text": "Exchange 24 currencies",
+            "disabled": true
+          },
+          {
+            "text": "Free payment to other Draft accounts",
+            "disabled": true
+          }
+        ]
+      },
+      {
+          "image": "./src/assets/images/credit-card.webp",
+          "title": "Premium",
+          "price": "$8",
+          "parag": "Priority support and multi-user access to maximize your productivity.",
+          "buttonText": "Get Started",
+          "itemList": [
+            {
+              "text": "10 free local transfer"
+            },
+            {
+              "text": "10 free local transfer"
+            },
+            {
+              "text": "Multi-user access"
+            },
+            {
+              "text": "Prepaid debit cards"
+            },
+            {
+              "text": "Virtual cards"
+            },
+            {
+              "text": "Priority 24/7 support"
+            },
+            {
+              "text": "Exchange 24 currencies"
+            },
+            {
+              "text": "Free payment to other Draft accounts"
+            }
+          ]
+      },
+      {
+          "image": "./src/assets/images/credit-card.webp",
+          "title": "Business",
+          "price": "$5",
+          "parag": "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum",
+          "buttonText": "Get Started",
+          "itemList": [
+            {
+              "text": "10 free local transfer"
+            },
+            {
+              "text": "10 free local transfer"
+            },
+            {
+              "text": "Multi-user access"
+            },
+            {
+              "text": "Prepaid debit cards"
+            },
+            {
+              "text": "Virtual cards"
+            },
+            {
+              "text": "Priority 24/7 support",
+              "disabled": true
+            },
+            {
+              "text": "Exchange 24 currencies",
+              "disabled": true
+            },
+            {
+              "text": "Free payment to other Draft accounts",
+              "disabled": true
+            }
+          ]
+      },
+      {
+          "image": "./src/assets/images/credit-card.webp",
+          "title": "Teams",
+          "price": "$3",
+          "parag": "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum",
+          "buttonText": "Get Started",
+          "itemList": [
+            {
+              "text": "10 free local transfer"
+            },
+            {
+              "text": "10 free local transfer"
+            },
+            {
+              "text": "Multi-user access",
+              "disabled": true
+            },
+            {
+              "text": "Prepaid debit cards",
+              "disabled": true
+            },
+            {
+              "text": "Virtual cards",
+              "disabled": true
+            },
+            {
+              "text": "Priority 24/7 support",
+              "disabled": true
+            },
+            {
+              "text": "Exchange 24 currencies",
+              "disabled": true
+            },
+            {
+              "text": "Free payment to other Draft accounts",
+              "disabled": true
+            }
+          ]
+      }
+  ]
+}

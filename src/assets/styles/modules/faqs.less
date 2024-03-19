@@ -1,0 +1,29 @@
+.faqs {
+  margin-bottom: 64/@rem;
+
+  .media(tablet, {
+    margin-bottom: 160/@rem;
+  });
+
+  &__header {
+    text-align: center;
+    margin-bottom: 64/@rem;
+
+    .media(tablet, {
+      margin-bottom: 120/@rem;
+    });
+  }
+
+  &__title {
+    margin-bottom: 16/@rem;
+    color: @c-primary;
+
+    .media(tablet, {
+      margin-bottom: 0;
+    });
+  }
+
+  &__subtitle {
+    color: @c-secondary-light;
+  }
+}

@@ -1,0 +1,46 @@
+.button {
+  display: inline-flex;
+  height: 54/@rem;
+  padding: 14/@rem 24/@rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20/@rem;
+  color: @c-white;
+  font-size: 15/@rem;
+  gap: 10/@rem;
+  transition: opacity 0.3s ease, color 0.3s ease;
+  background-color: @c-accent;
+  min-width: 167/@rem;
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &--secondary {
+  background-color: @c-secondary-dark;
+  min-width: 200/@rem;
+
+    &::after {
+      content: url('/src/assets/images/arrow.svg');
+      transition: transform 0.3s ease;
+    }
+
+    &:hover {
+      &::after {
+        transform: translateX(5px);
+      }
+    }
+  }
+
+  &--ghost {
+    background-color: transparent;
+    border: 2px solid @c-secondary-dark;
+    color: @c-secondary-dark;
+    transition: border 0.3s ease, color 0.3s ease;
+
+    &:hover {
+      border: 2px solid @c-primary;
+      color: @c-primary;
+    }
+  }
+}

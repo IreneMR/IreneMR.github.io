@@ -1,0 +1,57 @@
+.hero-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 64/@rem;
+  color: @c-white;
+
+
+  .media(tablet, {
+    margin: 0 auto 64/@rem;
+    position: relative;
+    text-align: left;
+  });
+
+  &__info {
+    flex-direction: column;
+    margin-bottom: 32/@rem;
+
+    .media(tablet, {
+      position: absolute;
+      top: 30/@rem;
+      left: 20/@rem;
+      margin-bottom: 0;
+      z-index: @z-content;
+    });
+
+    .media(desktop, {
+      top: 117/@rem;
+      left: 20/@rem;
+    });
+  }
+
+  &__title {
+    .media(tablet, {
+      margin-bottom: 13/@rem;
+    });
+  }
+
+  &__text {
+    margin: 32/@rem 0;
+
+    .media( tablet, {
+      margin-top: 0;
+      margin-right: 55/@rem;
+      margin-bottom: 51/@rem;
+    });
+  }
+
+  &__image {
+    .media( tablet, {
+      align-self: center;
+      margin-left: auto;
+      transform: translateX(106/@rem);
+    });
+  }
+}

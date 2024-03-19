@@ -1,0 +1,53 @@
+{
+  "footerLists": [
+    {
+      "items": [
+        {
+          "text": "Team",
+          "href": "#"
+        },
+        {
+          "text": "Press",
+          "href": "#"
+        },
+        {
+          "text": "Fees",
+          "href": "#"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "text": "Services",
+          "href": "#"
+        },
+        {
+          "text": "Projects",
+          "href": "#"
+        },
+        {
+          "text": "Affiliate",
+          "href": "#"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "text": "Term of use",
+          "href": "#"
+        },
+        {
+          "text": "Privacy Policy",
+          "href": "#"
+        },
+        {
+          "text": "Contact us",
+          "href": "#"
+        }
+      ]
+    }
+
+  ]
+}

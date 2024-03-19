@@ -1,0 +1,17 @@
+{
+  "items": [
+    {
+        "name": "Home",
+        "href": "#"
+    },
+    {
+        "name": "Feature",
+        "href": "#"
+    },
+    {
+        "name": "Pricing",
+        "href": "#"
+    }
+  ],
+  "buttonText": "Sign up"
+}

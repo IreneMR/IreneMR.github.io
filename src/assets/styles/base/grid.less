@@ -1,0 +1,24 @@
+// GRID
+@g-wrapper: 946;
+@g-gutter-width: 20;
+@columns: 10;
+
+@percentColGutter: percentage(@g-gutter-width / @g-wrapper);
+@percentColWidth: percentage(((@g-wrapper - (@g-gutter-width * (@columns - 1))) / @columns) / @g-wrapper);
+
+@iterations: @columns;
+.loopingClass(@index) when (@index > 0){
+  .col-@{index}{
+    // width: calc(100% - 32px);
+    width: 100%;
+  }
+  .loopingClass(@index - 1);
+
+  .media( tablet, {
+    .col-@{index}{
+      width:@percentColWidth * @index + (@percentColGutter * (@index - 1));
+    }
+  });
+}
+.loopingClass(0){}
+.loopingClass(@iterations);

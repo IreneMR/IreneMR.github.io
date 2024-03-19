@@ -1,0 +1,26 @@
+{
+  "title": "Frequently <span class='highlight'>asked questions</span>",
+  "text": "If you are not sure whether Draft is suitable is for you or not, do not worry. We are here to explain everything you might want to know",
+  "faqsList": [
+    {
+      "title": "What is the difference between Draft and a traditional bank account?",
+      "text": "Lorem Ipsum Lorem Ipsum Lorem Ipsum"
+    },
+    {
+      "title": "Who can open a Draft account?",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ut risus id ex interdum sollicitudin nec in sapien. Proin sed lacus eu diam dignissim pellentesque vel sit amet tellus. Pellentesque ullamcorper scelerisque faucibus. Sed purus lorem, vestibulum non urna id, feugiat interdum dui. Maecenas finibus purus sollicitudin metus tempus, vitae blandit velit pretium. Vestibulum et eros porta, bibendum lacus quis, cursus nisl. Suspendisse at magna ultrices, faucibus nisl ut, efficitur est."
+    },
+    {
+      "title": "What if I withdraw money abroad?",
+      "text": "Lorem Ipsum Lorem Ipsum Lorem Ipsum"
+    },
+    {
+      "title": "Can I cancel my subscrption or switch to another plan anytime?",
+      "text": "Lorem Ipsum Lorem Ipsum Lorem Ipsum"
+    },
+    {
+      "title": "What happens if I withdraw more than $250?",
+      "text": "Lorem Ipsum Lorem Ipsum Lorem Ipsum"
+    }
+  ]
+}

@@ -1,3 +1,38 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-    background-color: @fabada;
+  color: @c-secondary;
+  font-family: @f-text;
+  display: flex;
+  flex-direction: column;
+  background-color: @c-bg;
+}
+
+main {
+  flex: 1;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: @g-max-width + @g-padding-mobile * 2;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: @g-padding-mobile;
+  padding-right: @g-padding-mobile;
+
+  .media(tablet, {
+    padding-left: @g-padding-tablet;
+    padding-right: @g-padding-tablet;
+  });
+
+  .media(desktop, {
+    padding-left: @g-padding-mobile;
+    padding-right: @g-padding-mobile;
+  })
+}
+
+.shadow {
+  filter: drop-shadow(@shadow);
 }

@@ -1,0 +1,65 @@
+.collapsable {
+  background-color: @c-white;
+  border-radius: 15px;
+  padding: 16/@rem;
+  margin-bottom: 20/@rem;
+
+  .media(tablet, {
+    padding: 30/@rem;
+    border-radius: 20/@rem;
+  });
+
+  &__title {
+    color: @c-secondary-dark;
+    transition: color 0.3s ease;
+  }
+
+  &__toggler {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    text-align: left;
+    color: @c-secondary-dark;
+    transition: color 0.3s ease;
+
+    &:hover {
+      .collapsable__title {
+        color: @c-secondary-light;
+      }
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.3s ease;
+
+    &.open {
+      grid-template-rows: 1fr;
+    }
+  }
+
+  &__content-inner {
+    overflow: hidden;
+  }
+
+  &__title, &__image {
+    pointer-events: none;
+  }
+
+  &__image {
+    transition: transform 0.3s ease;
+    width: 16/@rem;
+    height: 16/@rem;
+
+    .media(tablet, {
+      width: 32/@rem;
+      height: 32/@rem;
+    });
+
+    .open & {
+      transform: rotate(45deg);
+    }
+  }
+}

@@ -4,79 +4,242 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ey</title>
+    <title>SEAT:CODE CSS Code Challenge</title>
 
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="EY">
+    <meta name="application-name" content="SEAT:CODE CSS Code Challenge">
 
     <!-- Add to homescreen for Safari on iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="EY">
+    <meta name="apple-mobile-web-app-title" content="SEAT:CODE CSS Code Challenge">
 
+    <link rel="icon" type="image/svg+xml" href="src/assets/images/favicon.svg">
+    <link rel="icon" type="image/png" href="src/assets/images/favicon.png">
     <link rel="shortcut icon" href="./src/assets/img/favicon.ico"><!--16x16 o 32x32-->
     <link rel="apple-touch-icon" href="./src/assets/img/favicon_iOS.png"><!--114x114-->
 
-    <!-- <link rel="stylesheet/less" type="text/css" href="./../assets/styles/styles.less" /> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Only for developing purposes -->
+    <!-- <link rel="stylesheet/less" type="text/css" href="./src/assets/styles/styles.less" /> -->
     <link rel="stylesheet" type="text/css" href="./dist/styles.css" />
 
-    <!-- <script>less = { env: 'development'};</script> -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/less" ></script> -->
-    <!-- <script>less.watch();</script> -->
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/nunjucks/3.2.4/nunjucks.min.js" integrity="sha512-YvU0oaPCJSOIFni9rIOthOs5GgtU5kNZMKQG/Nt33t/H9g/1+TK7KJuMsCZS6v4O3+x253OZlTzPryrUtxxORw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Chart.js and Swiper from cdnjs had problems -->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+
+    <!-- Only for developing purposes -->
+    <!-- <script>less = { env: 'development'};</script>
+    <script src="https://cdn.jsdelivr.net/npm/less@3.6.0/dist/less.min.js" ></script>
+    <script>less.watch();</script> -->
+
 </head>
 <body>
-    <section data-hero></section>
-    <script id="hero" type="text/x-handlebars-template">
-        <div class="entry">
-            <h1>{{title}}</h1>
-            <div class="body">
-                {{#each elems}}
-                    <p>{{body}}</p>
-                {{/each}}
+    <!-- Header and Hero Header images don't have lazy loading because they appear in the first fold -->
+    <div class="background-container">
+        <header data-header></header>
+        <script id="header" type="text/template">
+            <div class="header wrapper">
+                <div class="header__container">
+                    <a href="/" class="header__link">
+                        <img src="src/assets/images/logo.svg" width="48" height="53" alt="Logo" />
+                    </a>
+                    <button type="button" class="header__hamburguer" aria-label="Open Menu" data-toggle-menu>
+                        <img src="src/assets/images/menu.svg" width="40" height="40" />
+                    </button>
+                    <div class="header__menu" data-menu>
+                        <button type="button" class="header__close" aria-label="Close Menu" data-toggle-menu>
+                            <span aria-label="Close Menu">X</span>
+                        </button>
+                        <ul class="header__list">
+                            {% for item in items %}
+                                <li class="header__list-item">
+                                    <a href="{{item.href}}" class="Body-Regular-17">{{item.name}}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                        <a href="#" class="button header__button" title="go to sign up page">{{ buttonText }}</a>
+                    </div>
+                </div>
             </div>
-        </div>
-    </script>
+        </script>
 
-    <section data-distributive></section>
-    <script id="distributive" type="text/x-handlebars-template">
-        <div class="entry">
-            <h1>{{title}}</h1>
-            <div class="body">
-                {{#each elems}}
-                    <p>{{body}}</p>
-                {{/each}}
+        <section data-hero></section>
+        <script id="hero" type="text/template">
+            <div class="hero-header wrapper">
+                <div class="hero-header__info col-5">
+                    <h1 class="h1 hero-header__title">{{ title }}</h1>
+                    <p class="Body-Regular-20 hero-header__text">{{ text }}</p>
+                    <a href="#" class="button button--secondary" title="go to register page">{{ buttonText }}</a>
+                </div>
+                <picture class="hero-header__image shadow col-8">
+                    <source media="(max-width:767px)" width="220" height="480" srcset="src/assets/images/phone-mobile.webp" />
+                    <source media="(min-width:768px)" width="819" height="948" srcset="src/assets/images/phone.webp" />
+                    <img src="src/assets/images/phone-mobile.webp" width="220" height="480" alt="mobile photo" />
+                </picture>
             </div>
+        </script>
+    </div>
+
+    <section data-info></section>
+    <script id="info" type="text/template">
+        <div class="wrapper">
+            {% for info in infos %}
+            <article class="info">
+                <div class="col-5">
+                    {% if info.image %}
+                        <img src="{{ info.image }}" class="info__image shadow" alt="{{ info.alt }}">
+                    {% else %}
+                        <div class="info__block">
+                            {% for bubble in bubbles %}
+                                <div class="info__bubble shadow">
+                                    <span class="Body-Regular-20 info__bubble-title">
+                                        {{bubble.title}}
+                                    </span>
+                                    <p class="h3 info__bubble-price">
+                                        {{bubble.price}}
+                                    </p>
+                                </div>
+                            {% endfor %}
+                        </div>
+                        <canvas class="info__chart shadow" data-covid-chart aria-label="COVID Chart" role="img">
+                            <p>Your browser does not support the canvas element.</p>
+                        </canvas>
+                    {% endif %}
+                </div>
+                <div class="info__text col-4">
+                    <h2 class="h2 info__title">{{ info.title }}</h2>
+                    <p class="Body-Regular-20 info__parag">{{ info.parag }}</p>
+                    {% if info.button %}
+                        <a href="#" class="button button--secondary" title="go to learn more page">{{ info.button }}</a>
+                    {% elseif info.users %}
+                        <img src="{{ info.users }}" class="info__image" alt="avatar users photo">
+                    {% endif %}
+                </div>
+            </article>
+            {% endfor %}
         </div>
     </script>
 
     <section data-slider></section>
-    <script id="slider" type="text/x-handlebars-template">
-        <div class="entry">
-            <h1>{{title}}</h1>
-            <div class="body">
-                {{#each elems}}
-                    <p>{{body}}</p>
-                {{/each}}
+    <script id="slider" type="text/template">
+        <div class="slider swiper wrapper" data-card-slider>
+            <div class="slider__header">
+                <h2 class="h3 slider__title">
+                    {{ title|safe }}
+                </h2>
+                <p class="Body-Regular-24 slider__subtitle">{{ parag }}</p>
+            </div>
+            <div class="slider__wrapper swiper-wrapper">
+                {% for card in cards %}
+                <article class="card slider__card swiper-slide">
+                    <div class="card__text">
+                        <h3 class="h3 card__title">
+                            {{ card.title }}
+                        </h3>
+                        <p class="card__price">
+                            <span class="h1 card__price-text">{{ card.price }}</span>
+                            <span class="h3">/m</span>
+                        </p>
+                        <p class="Body-Regular-20 card__subtitle">{{ card.parag }}</p>
+                    </div>
+                    <button type="button" class="button button--ghost card__button" title="button go to get started page">{{ card.buttonText }}</button>
+                    <img src="{{ card.image }}" class="card__image shadow" alt="credit card photo">
+                    <ul class="card__list">
+                        {% for item in card.itemList %}
+                            <li class="card__list-item{{ ' card__list-item--disabled' if item.disabled }}">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M1.29289 12.0329C1.68342 11.6424 2.31658 11.6424 2.70711 12.0329L8.83711 18.1629C9.22763 18.5534 9.22763 19.1866 8.83711 19.5771C8.44658 19.9676 7.81342 19.9676 7.42289 19.5771L1.29289 13.4471C0.90237 13.0566 0.90237 12.4234 1.29289 12.0329Z" fill="#554DDE"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M22.707 4.29289C23.0975 4.68342 23.0975 5.31658 22.707 5.70711L8.83699 19.5771C8.44647 19.9676 7.8133 19.9676 7.42278 19.5771C7.03225 19.1866 7.03225 18.5534 7.42278 18.1629L21.2928 4.29289C21.6833 3.90237 22.3165 3.90237 22.707 4.29289Z" fill="#554DDE"/>
+                                </svg>
+                                <span class="Body-Regular-17">{{ item.text }}</span>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </article>
+                {% endfor %}
+            </div>
+            <div class="swiper-scrollbar slider__scrollbar" data-slider-scrollbar></div>
+            <button type="button" class="swiper-button-prev slider__button" data-slider-prev></button>
+            <button type="button" class="swiper-button-next slider__button" data-slider-next></button>
+            <div class="swiper-pagination slider__pagination" data-slider-pagination></div>
+        </div>
+    </script>
+
+    <section data-faqs></section>
+    <script id="faqs" type="text/template">
+        <div class="faqs wrapper">
+            <div class="faqs__header">
+                <h2 class="h3 faqs__title">
+                    {{ title|safe }}
+                </h2>
+                <p class="Body-Regular-24 faqs__subtitle">{{ text }}</p>
+            </div>
+            {% for faq in faqsList %}
+                <div class="collapsable shadow">
+                    <button
+                        type="button"
+                        class="collapsable__toggler"
+                        data-collapsable
+                        aria-expanded="false"
+                        aria-controls="collapsable-{{loop.index}}"
+                        id="collapsable-label-{{loop.index}}"
+                        title="button open collapsable"
+                    >
+                        <h3 class="h4 collapsable__title">
+                            {{faq.title}}
+                        </h3>
+                        <img src="src/assets/images/plus.svg" alt="toggle collapsable" class="collapsable__image">
+                    </button>
+                    <div
+                        class="collapsable__content"
+                        data-collapsable-content
+                        role="region"
+                        aria-labelledby="collapsable-label-{{loop.index}}"
+                        id="collapsable-{{loop.index}}"
+                    >
+                        <div class="collapsable__content-inner">
+                            <p class="Body-Regular-17">{{faq.text}}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </script>
+
+    <footer data-footer class="footer"></footer>
+    <script id="footer" type="text/template">
+        <div class="wrapper">
+            <div class="footer__container">
+                <div class="col-3">
+                    <a href="/" class="footer__logo">
+                        <img src="src/assets/images/logo.svg" width="80" height="85" alt="Logo" loading="lazy" />
+                    </a>
+                    <p class="Body-Regular-20 footer__text">Copyright © 2020  Draft LLC.
+                        All rights reserved.
+                    </p>
+                </div>
+                <div class="col-5 footer__list">
+                    {% for list in footerLists %}
+                        <ul>
+                            {% for item in list.items %}
+                                <li class="footer__list-item Body-Regular-20">
+                                    <a href="{{item.href}}"> {{item.text}}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% endfor %}
+                </div>
             </div>
         </div>
     </script>
 
-    <section data-footer></section>
-    <script id="footer" type="text/x-handlebars-template">
-        <div class="entry">
-            <h1>{{title}}</h1>
-            <div class="body">
-                {{#each elems}}
-                    <p>{{body}}</p>
-                {{/each}}
-            </div>
-        </div>
-    </script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js" integrity="sha512-E1dSFxg+wsfJ4HKjutk/WaCzK7S2wv1POn1RRPGh8ZK+ag9l244Vqxji3r6wgz9YBf6+vhQEYJZpSjqWFPg9gg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script type="module" src="./src/assets/scripts/handlebars.js"></script>
-    <script type="module" src="./src/assets/scripts/app.js"></script>
+    <script type="module" src="./src/assets/scripts/templating.js"></script>
+    <script type="module" src="./src/assets/scripts/blocks/covidChart.js"></script>
+    <script type="module" src="./src/assets/scripts/blocks/collapsable.js"></script>
+    <script type="module" src="./src/assets/scripts/modules/header.js"></script>
+    <script type="module" src="./src/assets/scripts/modules/slider.js"></script>
 </body>
 </html>

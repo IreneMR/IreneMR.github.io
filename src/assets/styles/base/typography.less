@@ -1,0 +1,108 @@
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+
+  font-size: 100%;
+}
+
+[role='button'] {
+  cursor: pointer;
+}
+
+// FONT STYLES
+.h1 {
+  font-family: @f-text;
+  font-size: 50/@rem;
+  font-weight: @f-bold;
+  line-height: 60/@rem;
+
+  .media(tablet, {
+    font-size: 60/@rem;
+    line-height: 90/@rem;
+  });
+}
+
+.h2 {
+  font-family: @f-text;
+  font-size: 40/@rem;
+  font-weight: @f-bold;
+  line-height: 44/@rem;
+
+  .media(tablet, {
+    font-size: 50/@rem;
+    line-height: 70/@rem;
+  });
+}
+
+.h3 {
+  font-family: @f-text;
+  font-size: 40/@rem;
+  font-weight: @f-bold;
+  line-height: 60/@rem;
+
+  .media(tablet, {
+    font-size: 40/@rem;
+    line-height: 90/@rem;
+  });
+}
+
+.h4 {
+  font-family: @f-text;
+  font-size: 18/@rem;
+  font-weight: @f-bold;
+  line-height: 30/@rem;
+
+  .media( tablet, {
+    font-size: 24/@rem;
+    line-height: 36/@rem;
+  });
+}
+
+.Body-Regular-24 {
+  font-family: @f-text;
+  font-size: 20/@rem;
+  font-weight: @f-regular;
+  line-height: 30/@rem;
+
+  .media( tablet, {
+    font-size: 24/@rem;
+    line-height: 36/@rem;
+  });
+}
+
+.Body-Regular-20 {
+  font-family: @f-text;
+  font-size: 18/@rem;
+  font-weight: @f-regular;
+  line-height: 30/@rem;
+
+  .media( tablet, {
+    font-size: 20/@rem;
+    line-height: 30/@rem
+  });
+}
+
+.Body-Regular-17 {
+  font-family: @f-text;
+  font-size: 17/@rem;
+  font-weight: @f-regular;
+  line-height: 25/@rem;
+}
+
+.Caption-Regular-15 {
+  font-family: @f-text;
+  font-size: 15/@rem;
+  font-weight: @f-regular;
+  line-height: 22/@rem;
+}
+
+.Small-Regular-13 {
+  font-family: @f-text;
+  font-size: 13/@rem;
+  font-weight: @f-regular;
+  line-height: 19/@rem;
+}

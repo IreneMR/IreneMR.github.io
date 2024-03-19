@@ -1,14 +1,5 @@
-{ 
-    "title": "My New Post",
-    "elems": [
-        {
-            "body": "This is my first post!"
-        },
-        {
-            "body": "This is my first post!"
-        },
-        {
-            "body": "This is my first post!"
-        }
-    ]
+{
+  "title": "Smart Banking for freelancers",
+  "text": "Draft is a revolutionary mobile app built to help you manage your business easily and save your money.",
+  "buttonText": "Register Now"
 }

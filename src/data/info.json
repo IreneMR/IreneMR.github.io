@@ -1,0 +1,32 @@
+{
+  "bubbles": [
+    {
+      "title": "Balance",
+      "price": "$5,600"
+    },
+    {
+      "title": "Last Transaction",
+      "price": "$230"
+    }
+  ],
+  "infos": [
+    {
+      "image": "./src/assets/images/credit-card.webp",
+      "title": "One card for all your payments",
+      "parag": "Get 3% back on everything you buy with the Draft card. Register today and enjoy every aspect of your business.",
+      "alt": "credit card photo"
+    },
+    {
+      "title": "Manage your finances like a pro in no time",
+      "parag": "With Draft, book keeping, banking, and invoices are all in one place. You will always know where you stand.",
+      "button": "Learn More"
+    },
+    {
+      "image": "./src/assets/images/chat.webp",
+      "title": "We support you in 5 different languages",
+      "parag": "Our support team in here to help you in 5 languages - English, French, Spanish,Polish and German.",
+      "users": "./src/assets/images/users.svg",
+      "alt": "chat photo"
+    }
+  ]
+}
